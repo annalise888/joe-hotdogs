@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+	
+	<script language = "javascript">
+		
+		num_hotdogs = parseInt(prompt("How many hotdogs do you want?", "0"));
+		num_fries = parseInt(prompt("How many fries do you want?","0"));
+		num_drinks = parseInt(prompt("How many drinks do you want?","0"));
+		subtotal = (num_hotdogs * 3.25) + (num_fries *2.00) + (num_drinks *1.50);
+		discount = 0;
+		if (subtotal >= 20) {
+			discount = subtotal*0.1;
+		}
+		tax = subtotal*.0625;
+		total_price = subtotal - discount + tax;
+		document.write("Items ordered: " + "<br>"
+					  + "Hotdogs: " + num_hotdogs
+					  + "<br>"
+					  + "Fries: " + num_fries
+					  + "<br>"
+					  + "Drinks: " + num_drinks
+					  + "<br>" + "<br>");
+		
+		document.write("Subtotal: $" + subtotal.toFixed(2)
+					  + "<br>"
+					  + "Discount: -$" + discount.toFixed(2)
+					  + "<br>"
+					  + "Tax: $" + tax.toFixed(2)
+					  + "<br>"
+					  + "Total: $" + total_price.toFixed(2));	
+	</script>
+	
+</body>
+</html>
